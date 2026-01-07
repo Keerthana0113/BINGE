@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Booking</title>
+    <link rel="stylesheet" href="assignment3.css">
+</head>
+<body>
+
+    
+    <header class="navbar">
+        <div class="logo">Binge</div>
+        <nav>
+            <a href="#movies">Movies</a>
+            <a href="#theaters">Theaters</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    
+    <section class="hero">
+        <h1>Find Your Movie and Book Your Seats</h1>
+        <p>Fast, simple and easy movie booking system.</p>
+        <button class="hero-btn" onclick="scrollToMovies()">View Movies</button>
+    </section>
+
+
+    <section id="movies">
+        <h2 class="section-title">Now Streaming</h2>
+
+        <div class="movies-container">
+
+            <div class="movie-card">
+                <img src="https://i.pinimg.com/736x/94/6b/3c/946b3c17f5b06a6418d03c92288318da.jpg" alt="Kantara">
+                <h3>Kantara</h3>
+                <p>
+                    <select>
+                        <option>Kannada</option>
+                        <option>Hindi</option>
+                        <option>English</option>
+                        <option>Tamil</option>
+                    </select>
+                </p>
+                <button onclick="bookSeat('Kantara')">Book Seats</button>
+            </div>
+
+            <div class="movie-card">
+                <img src="https://tse3.mm.bing.net/th/id/OIP.sgAjiWfevtdkFN-AdslkfgAAAA?pid=Api&P=0&h=180" alt="Devil">
+                <h3>Devil</h3>
+                <p>
+                    <select>
+                        <option>Kannada</option>
+                        <option>Hindi</option>
+                        <option>English</option>
+                    </select>
+                </p>
+                <button onclick="bookSeat('Devil')">Book Seats</button>
+            </div>
+
+            <div class="movie-card">
+                <img src="https://filmfare.wwmindia.com/content/2022/dec/pathaan11669878737.jpg" alt="Pathaan">
+                <h3>Pathaan</h3>
+                <p>
+                    <select>
+                        <option>Hindi</option>
+                        <option>English</option>
+                        <option>Telugu</option>
+                    </select>
+                </p>
+                <button onclick="bookSeat('Pathaan')">Book Seats</button>
+            </div>
+
+            <div class="movie-card">
+                <img src="https://tse2.mm.bing.net/th/id/OIP.1WuGzMZMkw24rDSInkV7RgHaJQ?pid=Api&P=0&h=180" alt="Jawan">
+                <h3>Jawan</h3>
+                <p>
+                    <select>
+                        <option>Hindi</option>
+                        <option>English</option>
+                        <option>Kannada</option>
+                    </select>
+                </p>
+                <button onclick="bookSeat('Jawan')">Book Seats</button>
+            </div>
+
+        </div>
+    </section>
+
+
+    <div id="seatModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <h3 id="movieTitle">Movie</h3>
+            <p>Select your seats:</p>
+            <div class="seats-grid" id="seatsGrid"></div>
+            <button onclick="confirmBooking()">Confirm Booking</button>
+        </div>
+    </div>
+    <footer id="theaters">
+        <p>© 2025 MovieBook</p>
+    </footer>
+
+<script src="assignment3.js"></script>
+</body>
+</html>
